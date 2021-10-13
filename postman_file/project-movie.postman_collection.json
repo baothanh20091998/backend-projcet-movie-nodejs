@@ -1,0 +1,1122 @@
+{
+	"info": {
+		"_postman_id": "ce48397a-7ed2-40a7-803f-1bdd4be1cd15",
+		"name": "project-movie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "find all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Trần Thúy Thành\",\r\n    \"email\": \"tranthanh@mail.com\",\r\n    \"password\": \"123456\",\r\n    \"phone\": \"09090808543\",\r\n    \"role\": \"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoiYmFyb3RhaG5oZkBtYWlsLmNvbSIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE2MzIxMDkyMjcsImV4cCI6MTYzMjExNTIyN30.Qnjq3_a_OlByG6ornIdrfTGxaYusjjDnGWVUG1SsAC8",
+								"description": "CLIENT",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsImVtYWlsIjoiaGFmZmZAbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2MzIxMDkyMDIsImV4cCI6MTYzMjExNTIwMn0.kBvoTGZjAzVcMyjYShxIeZ8fFxxFCy1YZeTl982nck0",
+								"description": "ADMIN",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/users/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"7"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Trần Thành Hà\",\r\n    \"email\": \"ha@mail.com\",\r\n    \"password\": \"123456\",\r\n    \"phone\": \"09090808543\",\r\n    \"role\": \"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload-avatar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoiYmFyb3RhaG5oZkBtYWlsLmNvbSIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE2MzIxMDkyMjcsImV4cCI6MTYzMjExNTIyN30.Qnjq3_a_OlByG6ornIdrfTGxaYusjjDnGWVUG1SsAC8",
+								"description": "client",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsImVtYWlsIjoiaGFmZmZAbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2MzIxMDkyMDIsImV4cCI6MTYzMjExNTIwMn0.kBvoTGZjAzVcMyjYShxIeZ8fFxxFCy1YZeTl982nck0",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"barotahnhf@mail.com\",\r\n    \"password\": \"0123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/upload-avatar",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"upload-avatar"
+							]
+						},
+						"description": "upload the avatar for the user with id"
+					},
+					"response": []
+				},
+				{
+					"name": "reset-pass",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"15315321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/reset-pass/10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"reset-pass",
+								"10"
+							]
+						},
+						"description": "reset password for the user id in the params"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie By User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}/users/get-movie-by-user/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"get-movie-by-user",
+								"2"
+							]
+						},
+						"description": "get the list movie by user was bought"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "sign-in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"tranthanh@mail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/sign-in",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"sign-in"
+							]
+						},
+						"description": "Sign in with email and password"
+					},
+					"response": []
+				},
+				{
+					"name": "sign-up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"name\": \"Baro CZ\",\r\n        \"email\": \"abdc@gmail.com\",\r\n        \"password\": \"123456789\",\r\n        \"phone\": \"0909885523\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/sign-up",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"sign-up"
+							]
+						},
+						"description": "Sign up new user with name email password phone"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ticket",
+			"item": [
+				{
+					"name": "Ticket By User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ticket//user-by-ticket/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ticket",
+								"",
+								"user-by-ticket",
+								"1"
+							]
+						},
+						"description": "get the one ticket by user id"
+					},
+					"response": []
+				},
+				{
+					"name": "Find All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ticket/getListTicket",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ticket",
+								"getListTicket"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cineplex",
+			"item": [
+				{
+					"name": "Find All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cineplex/getListCineplex",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cineplex",
+								"getListCineplex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cineplex/getCineplexDetail/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cineplex",
+								"getCineplexDetail",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJoYWZmZkBtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYzMzY1NTEyMywiZXhwIjoxNjMzNjYxMTIzfQ.osMTUtE3yObA-Pt7Wko5ScPiPKk8rSmaDiUyngVwNV4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "12312354151",
+									"type": "text"
+								},
+								{
+									"key": "cineplex",
+									"type": "file",
+									"src": "/C:/Users/Admin/Desktop/2020_02_15_10_44_IMG_2014.JPG"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/cineplex/createCineplex",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cineplex",
+								"createCineplex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cineplex",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJoYWZmZkBtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYzMzY1NTEyMywiZXhwIjoxNjMzNjYxMTIzfQ.osMTUtE3yObA-Pt7Wko5ScPiPKk8rSmaDiUyngVwNV4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/cineplex/deleteCineplex/18",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cineplex",
+								"deleteCineplex",
+								"18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Cineplex",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJoYWZmZkBtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYzMzg1MzA1MywiZXhwIjoxNjMzODU5MDUzfQ.ColFsfLudxYZPpLdiNYa0ZicwzFAXvJ0Tfo4ndeBuWM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "BHD",
+									"type": "text"
+								},
+								{
+									"key": "cineplex",
+									"type": "file",
+									"src": "/C:/Users/Admin/Desktop/2020_10_09_13_20_IMG_4708.JPEG"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/cineplex/editCineplex/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cineplex",
+								"editCineplex",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cinema",
+			"item": [
+				{
+					"name": "Find All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cinema/getListCinema",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cinema",
+								"getListCinema"
+							]
+						},
+						"description": "Get all the cinema include cinema movie and name movie"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cinema Detai",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cinema/getCinemaDetail/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cinema",
+								"getCinemaDetail",
+								"1"
+							]
+						},
+						"description": "get detail with id in the params (...getCinemaDetai/:id)"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Cinema",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJoYWZmZkBtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYzMzg1Njc2MywiZXhwIjoxNjMzODYyNzYzfQ.v1XwZyC0XYK2fVpVkDGbtgnD5074n45s20_1I_6SSG8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "CGV Bình Thạnh",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "222 Bình Thạnh",
+									"type": "text"
+								},
+								{
+									"key": "cinema",
+									"type": "file",
+									"src": "/C:/Users/Admin/Desktop/2020_02_08_19_36_IMG_1736.JPG"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/cinema/editCinema/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cinema",
+								"editCinema",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Cinema",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJoYWZmZkBtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYzMzg1Njc2MywiZXhwIjoxNjMzODYyNzYzfQ.v1XwZyC0XYK2fVpVkDGbtgnD5074n45s20_1I_6SSG8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cinema",
+									"type": "file",
+									"src": "/C:/Users/Admin/Desktop/2019_12_07_09_47_IMG_1315.JPG"
+								},
+								{
+									"key": "name",
+									"value": "BHD Tran Binh Trong",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "222 Tran Binh Trong",
+									"type": "text"
+								},
+								{
+									"key": "cineplexid",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/cinema/createCinema",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cinema",
+								"createCinema"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cinema",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJoYWZmZkBtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYzMzg1Njc2MywiZXhwIjoxNjMzODYyNzYzfQ.v1XwZyC0XYK2fVpVkDGbtgnD5074n45s20_1I_6SSG8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/cinema/deleteCinema/9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cinema",
+								"deleteCinema",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cinema Movie",
+			"item": [
+				{
+					"name": "Find All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cinemaMovie/getListCinemaMovie",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cinemaMovie",
+								"getListCinemaMovie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cinemaMovie/getCinemaMovieDetail/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cinemaMovie",
+								"getCinemaMovieDetail",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJoYWZmZkBtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYzNDAyNTIzMSwiZXhwIjoxNjM0MDMxMjMxfQ.fVUHtk8V93fHCi0pyRtB1mqF8Jsk_QqxAe7aY2LQ9Q8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cinemaid\": 2,\r\n    \"movieid\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/cinemaMovie/createCinemaMovie",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cinemaMovie",
+								"createCinemaMovie"
+							]
+						},
+						"description": "create the new movie for the cinema with cinema and movie already have."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJoYWZmZkBtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYzNDAyNTIzMSwiZXhwIjoxNjM0MDMxMjMxfQ.fVUHtk8V93fHCi0pyRtB1mqF8Jsk_QqxAe7aY2LQ9Q8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/cinemaMovie/deleteCinemaMovie/24",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cinemaMovie",
+								"deleteCinemaMovie",
+								"24"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJoYWZmZkBtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYzNDAyNTIzMSwiZXhwIjoxNjM0MDMxMjMxfQ.fVUHtk8V93fHCi0pyRtB1mqF8Jsk_QqxAe7aY2LQ9Q8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cinemaid\": 2,\r\n    \"movieid\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/cinemaMovie/editCinemaMovie/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cinemaMovie",
+								"editCinemaMovie",
+								"6"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "edit the movie which release in cinema, and the cinema show the movie"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "showtime",
+			"item": [
+				{
+					"name": "Find all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/showtime/getListShowtime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"showtime",
+								"getListShowtime"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/showtime/getShowtimeDetail/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"showtime",
+								"getShowtimeDetail",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJoYWZmZkBtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYzNDAzMDMwOSwiZXhwIjoxNjM0MDM2MzA5fQ.bHVq1cRYDmjSlAq3hwjJQtiiRom2Q8AX2k2Bi2T6i08",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startTime\": \"2021-09-20T15:00:15.000Z\",\r\n    \"cinema_movieId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/showtime/editShowtime/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"showtime",
+								"editShowtime",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJoYWZmZkBtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYzNDAzMDMwOSwiZXhwIjoxNjM0MDM2MzA5fQ.bHVq1cRYDmjSlAq3hwjJQtiiRom2Q8AX2k2Bi2T6i08",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/showtime/deleteShowtime/27",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"showtime",
+								"deleteShowtime",
+								"27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJoYWZmZkBtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYzNDAzMDMwOSwiZXhwIjoxNjM0MDM2MzA5fQ.bHVq1cRYDmjSlAq3hwjJQtiiRom2Q8AX2k2Bi2T6i08",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startTime\": \"2021-12-05T15:00:15.000Z\",\r\n    \"cinema_movieId\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/showtime/createShowTime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"showtime",
+								"createShowTime"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "seat",
+			"item": [
+				{
+					"name": "Find All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/seat/getListSeat",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"seat",
+								"getListSeat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/seat/getSeatDetail/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"seat",
+								"getSeatDetail",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJoYWZmZkBtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYzNDAzMDMwOSwiZXhwIjoxNjM0MDM2MzA5fQ.bHVq1cRYDmjSlAq3hwjJQtiiRom2Q8AX2k2Bi2T6i08",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"F10\",\r\n    \"price\" : 80000,\r\n    \"type\": \"NORMAL\",\r\n    \"showtimeId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/seat/createSeat",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"seat",
+								"createSeat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJoYWZmZkBtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYzNDAzMDMwOSwiZXhwIjoxNjM0MDM2MzA5fQ.bHVq1cRYDmjSlAq3hwjJQtiiRom2Q8AX2k2Bi2T6i08",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/seat/deleteSeat/171",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"seat",
+								"deleteSeat",
+								"171"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJoYWZmZkBtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYzNDAzMDMwOSwiZXhwIjoxNjM0MDM2MzA5fQ.bHVq1cRYDmjSlAq3hwjJQtiiRom2Q8AX2k2Bi2T6i08",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"F1\",\r\n    \"price\" : 80000,\r\n    \"type\": \"VIP\",\r\n    \"showtimeId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/seat/editSeat/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"seat",
+								"editSeat",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "booking",
+			"item": [
+				{
+					"name": "Booking Ticket",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ0cmFudGhhbmhAbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2MzQxMTE1MTAsImV4cCI6MTYzNDExNzUxMH0.eITzuk1n2lN-TAzAJ7tRYyHSVBHN9N9Bsf17iEw8-f4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"id\": \"7\"\r\n    },\r\n    {\r\n        \"id\":\"8\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/booking/bookingTicket",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"booking",
+								"bookingTicket"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
