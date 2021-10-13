@@ -10,6 +10,9 @@ p {
   text-align: center;
   color: coral;
 }
+.app p a {
+  color: black;
+}
 .app {
   position: absolute;
   top: 50%;
@@ -19,5 +22,5 @@ p {
 .background {
   width: 100%;
   height: 100vh;
-  background-color: black;
+  background-color: bisque;
 }
