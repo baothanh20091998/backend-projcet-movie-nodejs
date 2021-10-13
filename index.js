@@ -28,8 +28,10 @@ app.get("/api/v1", (req, res) => {
   res.send("Node JS 01 Sáng ");
 });
 
-app.listen(9000, () => {
-  console.log("Connect successed on port 9000");
+const port = process.env.PORT || 9000;
+
+app.listen(port, () => {
+  console.log("Connect successed on port " + port);
 });
 
 app.use("/api/v1/", rootRouter);

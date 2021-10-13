@@ -21,7 +21,8 @@
 							"path": [
 								"users"
 							]
-						}
+						},
+						"description": "find all the list user."
 					},
 					"response": []
 				},
@@ -39,7 +40,8 @@
 								"users",
 								"3"
 							]
-						}
+						},
+						"description": "find the details user.\ndata:\n{\nuser info,\nticket:[\n{seat},\n{seat},...\n]\n}"
 					},
 					"response": []
 				},
@@ -65,7 +67,8 @@
 							"path": [
 								"users"
 							]
-						}
+						},
+						"description": "create new user for the admin role. Can create a user with role admin"
 					},
 					"response": []
 				},
@@ -108,7 +111,8 @@
 									"disabled": true
 								}
 							]
-						}
+						},
+						"description": "delete a user existed. requre token user role admin"
 					},
 					"response": []
 				},
@@ -135,7 +139,8 @@
 								"users",
 								"1"
 							]
-						}
+						},
+						"description": "edit a user existed, require user role admin"
 					},
 					"response": []
 				},
@@ -206,7 +211,7 @@
 								"10"
 							]
 						},
-						"description": "reset password for the user id in the params"
+						"description": "reset password for the user id in the params, require user role admin"
 					},
 					"response": []
 				},
@@ -223,14 +228,14 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/users/get-movie-by-user/2",
+							"raw": "{{url}}/users/get-movie-by-user/3",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"users",
 								"get-movie-by-user",
-								"2"
+								"3"
 							]
 						},
 						"description": "get the list movie by user was bought"
@@ -266,7 +271,7 @@
 								"sign-in"
 							]
 						},
-						"description": "Sign in with email and password"
+						"description": "Sign in with email and passsword,\ndata :\n{\nmessage,\ntoken\n}"
 					},
 					"response": []
 				},
@@ -294,7 +299,7 @@
 								"sign-up"
 							]
 						},
-						"description": "Sign up new user with name email password phone"
+						"description": "Sign up new user with name email password phone, client type. Not sign up if email was existed. Then send the newUser if succesed"
 					},
 					"response": []
 				}
@@ -338,7 +343,8 @@
 								"ticket",
 								"getListTicket"
 							]
-						}
+						},
+						"description": "find all the ticket user was buy\ndata:\n{ticket:[{seat},{seat},...],...}"
 					},
 					"response": []
 				}
@@ -425,7 +431,8 @@
 								"cineplex",
 								"createCineplex"
 							]
-						}
+						},
+						"description": "create the new cineplex with name and cineplex img"
 					},
 					"response": []
 				},
@@ -450,7 +457,8 @@
 								"deleteCineplex",
 								"18"
 							]
-						}
+						},
+						"description": "delete an existed cineplex. require user role admin"
 					},
 					"response": []
 				},
@@ -490,7 +498,8 @@
 								"editCineplex",
 								"3"
 							]
-						}
+						},
+						"description": "edit name and cineplex logo with the cineplex id param url. require user role admin"
 					},
 					"response": []
 				}
@@ -579,7 +588,8 @@
 								"editCinema",
 								"1"
 							]
-						}
+						},
+						"description": "edit cine with name, address, cinema img by id in param url. require user role admin"
 					},
 					"response": []
 				},
@@ -628,7 +638,8 @@
 								"cinema",
 								"createCinema"
 							]
-						}
+						},
+						"description": "create new cinema with name, address, cinema img, cineplex id by id in param url. require user role admin"
 					},
 					"response": []
 				},
@@ -653,7 +664,8 @@
 								"deleteCinema",
 								"9"
 							]
-						}
+						},
+						"description": "delete an existed cinema by id in param url. require user role admin"
 					},
 					"response": []
 				}
@@ -761,7 +773,8 @@
 									"disabled": true
 								}
 							]
-						}
+						},
+						"description": "delete the movie for the cinema with cinema and movie already have by id params url"
 					},
 					"response": []
 				},
@@ -826,7 +839,8 @@
 								"showtime",
 								"getListShowtime"
 							]
-						}
+						},
+						"description": "find all the show time already have in the cinema"
 					},
 					"response": []
 				},
@@ -845,7 +859,8 @@
 								"getShowtimeDetail",
 								"1"
 							]
-						}
+						},
+						"description": "find the detail show time by id param url and check exist or not yet"
 					},
 					"response": []
 				},
@@ -879,7 +894,8 @@
 								"editShowtime",
 								"1"
 							]
-						}
+						},
+						"description": "edit the startTime and cinema_movieId for the cinema movie.\nrequire type user admin"
 					},
 					"response": []
 				},
@@ -904,7 +920,8 @@
 								"deleteShowtime",
 								"27"
 							]
-						}
+						},
+						"description": "delete the showtime with the id param url and check exist.\nrequire type user admin"
 					},
 					"response": []
 				},
@@ -937,7 +954,8 @@
 								"showtime",
 								"createShowTime"
 							]
-						}
+						},
+						"description": "create new startTime and cinema_movieId for the cinema movie.\nrequire type user admin"
 					},
 					"response": []
 				}
@@ -960,7 +978,8 @@
 								"seat",
 								"getListSeat"
 							]
-						}
+						},
+						"description": "Find the list all the seat available"
 					},
 					"response": []
 				},
@@ -979,7 +998,8 @@
 								"getSeatDetail",
 								"7"
 							]
-						}
+						},
+						"description": "Find the detail seat of the id in the params"
 					},
 					"response": []
 				},
@@ -1012,7 +1032,8 @@
 								"seat",
 								"createSeat"
 							]
-						}
+						},
+						"description": "create a new seat for the show time, check if the show time had the seat with the name created already have or not yet. Then create a new seat.\nrequire type user admin"
 					},
 					"response": []
 				},
@@ -1037,7 +1058,8 @@
 								"deleteSeat",
 								"171"
 							]
-						}
+						},
+						"description": "Delete the id seat take in the param url. Check if not exist then response the seat is not available or response the success seat was deleted\nrequire type user admin"
 					},
 					"response": []
 				},
@@ -1071,7 +1093,8 @@
 								"editSeat",
 								"1"
 							]
-						}
+						},
+						"description": "Change the name, price,type, showtimeid for the seat id in the param url. Check if the seat name already have in the showtime id or not yet then edit a new seat by seat id\nrequire type user admin"
 					},
 					"response": []
 				}
@@ -1112,7 +1135,8 @@
 								"booking",
 								"bookingTicket"
 							]
-						}
+						},
+						"description": "Buy the tickets for user with data\n[{id},{id},...]\nResults:\n[{seat was bought},{seat was bought}....]\nrequire sign in before buy"
 					},
 					"response": []
 				}
