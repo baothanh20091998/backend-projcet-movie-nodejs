@@ -17,16 +17,12 @@ app.use(
   })
 );
 
-app.use("/public", express.static(pubicPathDirectory));
+app.use("", express.static(pubicPathDirectory));
 //khi gõ bất cứ gì trên thanh url đều là phương thức get
 //http://localhost:9000
 //req là qúa trình gửi dữ liệu lên sv
 //res là phản ứng từ sv cho client
 app.use(express.json());
-
-app.get("/api/v1", (req, res) => {
-  res.send("Node JS 01 Sáng ");
-});
 
 const port = process.env.PORT || 9000;
 
